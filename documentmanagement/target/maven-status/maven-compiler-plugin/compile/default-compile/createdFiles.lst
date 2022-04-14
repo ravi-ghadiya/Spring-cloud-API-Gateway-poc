@@ -1,0 +1,16 @@
+com/webster/springboot/documentmanagement/DocumentmanagementApplication.class
+com/webster/springboot/documentmanagement/model/LoginRequest.class
+com/webster/springboot/documentmanagement/dao/UserRepository.class
+com/webster/springboot/documentmanagement/service/DocumentService.class
+com/webster/springboot/documentmanagement/dao/LinkShareDocumentRepository.class
+com/webster/springboot/documentmanagement/entity/LinkShareDocument.class
+com/webster/springboot/documentmanagement/service/UserService.class
+com/webster/springboot/documentmanagement/controller/DocumentController.class
+com/webster/springboot/documentmanagement/entity/User.class
+com/webster/springboot/documentmanagement/controller/UserController.class
+com/webster/springboot/documentmanagement/entity/Document.class
+com/webster/springboot/documentmanagement/ServletInitializer.class
+com/webster/springboot/documentmanagement/Config/ApplicationConfig.class
+com/webster/springboot/documentmanagement/dao/SessionRepository.class
+com/webster/springboot/documentmanagement/dao/DocumentRepository.class
+com/webster/springboot/documentmanagement/entity/UserSession.class

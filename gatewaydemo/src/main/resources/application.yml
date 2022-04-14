@@ -1,0 +1,50 @@
+server:
+  port: 8284
+
+spring:
+  application:
+    name: APIGateway
+  cloud:
+    gateway:
+      routes:
+        - id: user
+          uri: http://localhost:8189
+          order: 1
+          predicates:
+            - Path=/user/**
+        - id: documents
+          uri: http://localhost:8189
+          order: 2
+          predicates:
+            - Path=/documents/**
+        - id: feigndemoprotected
+          uri: http://localhost:8080
+          order: 1
+          predicates:
+            - Path=/feigndemo/protected/**
+        - id: feigndemo
+          uri: http://localhost:8080
+          order: 2
+          predicates:
+            - Path=/feigndemo/**
+
+gateway:
+  url:
+    publicPath:
+      - /user/public/**
+      - /documents/public/**
+      - /user/register
+      - /user/login
+      - /user/logout
+      - /feigndemo/public/**
+    authenticatedPath:
+      - /documents/protected/**
+      - /feigndemo/protected/**
+    privatePath:
+      - /documents/private/**
+      - /user/private/**
+
+documentmanagement:
+  host:
+    identity: http://localhost:8189
+
